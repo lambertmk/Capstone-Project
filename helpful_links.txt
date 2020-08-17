@@ -1,0 +1,3 @@
+Chicago public data source: https://home.chicagopolice.org/statistics-data/isr-data/
+
+PDAP Google Sheet: https://docs.google.com/spreadsheets/d/1yyjYV1BLFuLy32CW66zApuEWDSFrR9Dw9y49MU7dxcQ/edit#gid=0&fvid=260690296
