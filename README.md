@@ -13,8 +13,7 @@ For this reason, I've chosen to focus on arrests as an objective outcome. Unlike
 
 # Overview
 
-This project follows OSEMN process, which is an acronym for Obtain Scrub Examine Model Interpret. More information can be found below.
-https://towardsdatascience.com/5-steps-of-a-data-science-project-lifecycle-26c50372b492
+This project follows [OSEMN process](https://towardsdatascience.com/5-steps-of-a-data-science-project-lifecycle-26c50372b492), which is an acronym for Obtain Scrub Examine Model Interpret. The steps are below.
 
   1. Data Collection
     Data sources: [Chicago Investigative Stop Report data](https://home.chicagopolice.org/statistics-data/isr-data/) and Demographic information from the [US Census website](https://data.census.gov/cedsci/map?q=60624&tid=ACSDP5Y2018.DP05&vintage=2018&layer=VT_2018_860_00_PY_D1&cid=DP05_0001E&mode=thematic)
