@@ -31,6 +31,10 @@ This project follows [OSEMN process](https://towardsdatascience.com/5-steps-of-a
   
   This initial cleaning allowed for an early look at enforcement outcome vs. contact hour: ![image](https://github.com/lambertmk/Capstone-Project/blob/master/images/Screen%20Shot%202020-09-13%20at%2011.37.59%20AM.png)
   
+  As well as enforcement outcome by reported race: ![image](https://github.com/lambertmk/Capstone-Project/blob/master/images/Screen%20Shot%202020-09-13%20at%2011.38.14%20AM.png)
+  
+  Additional cleaning measures will be covered below, with additional details on the machine learning methods chosen.
+  
   
   3. Machine Learning Model #1 - using only zip code, contact hour and reported race, can we predict whether or not a incident will result in arrest?
   3a. Are the two highest features statistically significant from the rest of the dataset?
