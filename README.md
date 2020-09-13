@@ -15,7 +15,8 @@ For this reason, I've chosen to focus on arrests as an objective outcome. Unlike
 
 This project follows [OSEMN process](https://towardsdatascience.com/5-steps-of-a-data-science-project-lifecycle-26c50372b492), which is an acronym for Obtain Scrub Examine Model Interpret. The steps are below.
 
-  1. Data Collection
+  _1. Data Collection_
+  
    Data sources: [Chicago Investigative Stop Report data](https://home.chicagopolice.org/statistics-data/isr-data/) and Demographic information from the [US Census website](https://data.census.gov/cedsci/map?q=60624&tid=ACSDP5Y2018.DP05&vintage=2018&layer=VT_2018_860_00_PY_D1&cid=DP05_0001E&mode=thematic).
     
    The ISR data includes 290k+ rows of police-reported stop data, and 171 columns of input. Demographic details are included (age, sex, race) as well as geographical details (business ward, intersection), details on the stop (was a search conducted? if so, did the officer receive consent to search) and various potenital "outcome" fields (result of stop was arrest, inventory number and details of confiscated property)
