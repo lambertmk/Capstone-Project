@@ -56,17 +56,25 @@ This project follows [OSEMN process](https://towardsdatascience.com/5-steps-of-a
   Using our zipcode label encoder's `inverse_transformation`, we now know that the highest contributing factors are a stop occuring in 60624 or 60623.
   
   
-  ### Statistical Significance
-  
   ### Interpretation
   
   Using the Census website gives us additional context into why 60624 and 60623 may indicate higher rates of arrest - these are overwhelmingly communities of color with large numbers of residents living below the poverty line. Doing a quick calculation on these zipcodes show that the arrest rate is almost 2x the arrest rate for the entire dataset.
   
   We can clearly see these zip's outsize impact on the dataset viewed below: ![image](https://github.com/lambertmk/Capstone-Project/blob/master/images/Screen%20Shot%202020-09-13%20at%2012.16.25%20PM.png)
   
+  ### Statistical Significance
+  
+  It's helpful to know that these two zips have high rates of arrest; next, let's examine if those differences are statistically significant. Additionally, `MultiComparison` and tukey makes it easy to iterate through our possible combinations of zip and race and determine which have a p value of less than .05. A snippet is below: ![image](https://github.com/lambertmk/Capstone-Project/blob/master/images/Screen%20Shot%202020-09-13%20at%2012.23.26%20PM.png)
+  
+  Using Ordinary Least Squares, we've determined that there is a statistically significant different in arrest rates by zip code, as well as by race. Using tukey, we're able to iterate through a list of each and return a true or false value for each pairing.
   
   
 
+  __4. Machine Learning Model # 2__ 
+  
+__Knowing which officers from our dataset had the highest arrest rates, can we predict whether or not one of the "highest" officers was involved, using only demographic information about the person investigated?__
 
-  __4. Machine Learning Model # 2__ - can we predict whether or not an incident included one of the 100 officers with the highest arrest percentage?
-  __5. Interpretation - or, what do we do with the model's findings?__
+### Additional Cleaning Methods
+
+
+
