@@ -84,5 +84,15 @@ Many assumptions were made here, so that the resulting dataset was able to be an
 
 The cleaned dataframe result was roughly 48 columns; after dummy columns were created, it was 394. Here's a view of the correlation, before dummies: ![image](https://github.com/lambertmk/Capstone-Project/blob/master/images/Screen%20Shot%202020-09-13%20at%202.02.55%20PM.png)
 
+  ### Model Details
+  
+  Logistic Regression, Gradient Boosting, XGBoost, Decision Tree, AdaBoost, Support Vector Classification and Random Forest Classifier were run; the best result was achieved using Decision Tree, with an F1 score of .33. A grid search was performed to boost DT's performance, to no luck. 
+  
+  This dataset is extremely imbalanced; the highest 100 officers make up only 1.2% of the dataset! For this reason, Decision Tree was also run using `class_weight = 'balanced'`; the result was not any more accurate than the original run. 
+  
+  A visual representation of the Decision Tree model is included in the image folder. 
+  
+  ### Interpretation
+
 
 
