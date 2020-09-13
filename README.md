@@ -29,11 +29,10 @@ This project follows [OSEMN process](https://towardsdatascience.com/5-steps-of-a
   
   For the scope of this analysis, columns that included only text descriptions were also removed. The "clean" .csv file saved to this repository represents these changes. 
   
+  This initial cleaning allowed for an early look at ![enforcement outcome vs. contact hour](https://github.com/lambertmk/Capstone-Project/blob/master/images/Screen%20Shot%202020-09-13%20at%2011.37.59%20AM.png)
+  
   
   3. Machine Learning Model #1 - using only zip code, contact hour and reported race, can we predict whether or not a incident will result in arrest?
   3a. Are the two highest features statistically significant from the rest of the dataset?
   4. Machine Learning Model # 2 - can we predict whether or not an incident included one of the 100 officers with the highest arrest percentage?
   5. Interpretation - or, what do we do with the model's findings?
-  
-  This process follows OSEMN process, which is an acronym for Obtain Scrub Examine Model Interpret. More information can be found below.
-  https://towardsdatascience.com/5-steps-of-a-data-science-project-lifecycle-26c50372b492
