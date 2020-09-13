@@ -49,10 +49,24 @@ This project follows [OSEMN process](https://towardsdatascience.com/5-steps-of-a
   
   ### Model Details
   
-  Logistic Regression, Gradient Boosting, XGBoost and Decision Tree models were run, and all had F1 scores between .70 and .77. Decision Tree was run again with balanced class weight; the result was one percentage point lower than the first Decision Tree model. 
+  Logistic Regression, Gradient Boosting, XGBoost and Decision Tree, AdaBoost and Support Vector Classification models were run, and all had F1 scores between .69 and .77. The highest performing models were Gradient Boosting and XGBoost.
+  
+  The feature importance of the XGBoost model can be seen below: ![image](https://github.com/lambertmk/Capstone-Project/blob/master/images/Screen%20Shot%202020-09-13%20at%2012.08.51%20PM.png)
+  
+  Using our zipcode label encoder's `inverse_transformation`, we now know that the highest contributing factors are a stop occuring in 60624 or 60623.
+  
+  
+  ### Statistical Significance
+  
+  ### Interpretation
+  
+  Using the Census website gives us additional context into why 60624 and 60623 may indicate higher rates of arrest - these are overwhelmingly communities of color with large numbers of residents living below the poverty line. Doing a quick calculation on these zipcodes show that the arrest rate is almost 2x the arrest rate for the entire dataset.
+  
+  We can clearly see these zip's outsize impact on the dataset viewed below: ![image](https://github.com/lambertmk/Capstone-Project/blob/master/images/Screen%20Shot%202020-09-13%20at%2012.16.25%20PM.png)
+  
   
   
 
-  3a. Are the two highest features statistically significant from the rest of the dataset?
+
   __4. Machine Learning Model # 2__ - can we predict whether or not an incident included one of the 100 officers with the highest arrest percentage?
   __5. Interpretation - or, what do we do with the model's findings?__
