@@ -3,7 +3,7 @@
 
 ## Project Scope
 The intention of this project is to explore policing data for bias, measured in arrest rates. Iterating through various machine learning models, I attempted to answer two questions:
-1. Knowing zip code, time of day and race of the person investigated, can we predict of they were arrested?
+1. Knowing zip code, time of day and race of the person investigated, can we predict whether or not an incident resulted in arrest?
 2. Knowing which officers from our dataset had the highest arrest rates, can we predict whether or not one of the "highest" officers was involved, using only demographic information about the person investigated?
 
 There is a wealth of policing data recently available online, and I used the city of Chicago's Investigative Stop Reporting. This is a detailed, large (290k+ row) dataset covering January 2018 through December 2019. Rare among publically available police datasets, it includes randomized IDs for first, second and supervisory officers involved in each investigative stop. 
@@ -36,7 +36,23 @@ This project follows [OSEMN process](https://towardsdatascience.com/5-steps-of-a
   Additional cleaning measures will be covered below, with additional details on the machine learning methods chosen.
   
   
-  3. Machine Learning Model #1 - using only zip code, contact hour and reported race, can we predict whether or not a incident will result in arrest?
+  __3. Machine Learning Model #1__ 
+  
+  __Knowing zip code, time of day and race of the person investigated, can we predict whether or not an incident resulted in arrest?__
+  
+  ### Additional Cleaning Methods
+  
+  
+  The intention of this model was to start with just a few columns of data; based on exploratory visualizations a new dataframe was limited to contact hour, race code and zipcode. 
+  
+  Rows missing zipcode or enforcement type were removed for this reason. This left 67k+ rows for our model to run through. The target for this model was whether or not an arrest was reported (aka whether ENFORCEMENT_TYPE = ARR). Both zipcode and race had separate label encoders created, so the end results could be interpreted. 
+  
+  ### Model Details
+  
+  Logistic Regression, Gradient Boosting, XGBoost and Decision Tree models were run, and all had F1 scores between .70 and .77. Decision Tree was run again with balanced class weight; the result was one percentage point lower than the first Decision Tree model. 
+  
+  
+
   3a. Are the two highest features statistically significant from the rest of the dataset?
-  4. Machine Learning Model # 2 - can we predict whether or not an incident included one of the 100 officers with the highest arrest percentage?
-  5. Interpretation - or, what do we do with the model's findings?
+  __4. Machine Learning Model # 2__ - can we predict whether or not an incident included one of the 100 officers with the highest arrest percentage?
+  __5. Interpretation - or, what do we do with the model's findings?__
