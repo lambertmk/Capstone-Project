@@ -93,6 +93,9 @@ The cleaned dataframe result was roughly 48 columns; after dummy columns were cr
   A visual representation of the Decision Tree model is included in the image folder. 
   
   ### Interpretation
+  
+  hold for EDA
 
+The outcome of the Decision Tree model is an F1 score of .34 - not a strong model. Given that we're trying to predict whether or not one of 100 officers was involved and the dataset includes 7936 officers total (1.2%), we could also say that this model performs roughly 27x better than random guessing. 
 
-
+The intention of this second model was to test for strong bias in policing; to look for patterns in demographic data that would predict whether or not a subset of officers was involved. Knowing that our best result is a 34% F1 score is actually resassuring - we cannot in good conscience pinpoint if bias is occuring with these officers.
