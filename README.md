@@ -36,7 +36,7 @@ This project follows [OSEMN process](https://towardsdatascience.com/5-steps-of-a
   Additional cleaning measures will be covered below, with additional details on the machine learning methods chosen.
   
   
-  __3. Machine Learning Model #1__ 
+ ## __3. Machine Learning Model #1__ 
   
   __Knowing zip code, time of day and race of the person investigated, can we predict whether or not an incident resulted in arrest?__
   
@@ -70,7 +70,7 @@ This project follows [OSEMN process](https://towardsdatascience.com/5-steps-of-a
   
   
 
-  __4. Machine Learning Model # 2__ 
+## __4. Machine Learning Model # 2__ 
   
 __Knowing which officers from our dataset had the highest arrest rates, can we predict whether or not one of the "highest" officers was involved, using only demographic information about the person investigated?__
 
