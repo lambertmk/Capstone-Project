@@ -6,7 +6,7 @@ The intention of this project is to explore policing data for bias, measured in 
 1. Knowing zip code, time of day and race of the person investigated, can we predict of they were arrested?
 2. Knowing which officers from our dataset had the highest arrest rates, can we predict whether or not one of the "highest" officers was involved, using only demographic information about the person investigated?
 
-There is a wealth of policing data recently available online, and I used the city of Chicago's Investigative Stop Reporting. This is a detailed, large (290k+ row) dataset covering January 2018 through December 2019. Rare among publically available police datasets, it includes randomized ids for first, second and supervisory officers involved in each investigative stop recorded. 
+There is a wealth of policing data recently available online, and I used the city of Chicago's Investigative Stop Reporting. This is a detailed, large (290k+ row) dataset covering January 2018 through December 2019. Rare among publically available police datasets, it includes randomized IDs for first, second and supervisory officers involved in each investigative stop. 
 
 Given the nature of self-reported data, there is good reason to be skeptical about anything in this dataset that could be subjected to bias, from any perspective.
 For this reason, I've chosen to focus on arrests as an objective outcome. Unlike (for example) perceived threats to the officer or violent encounters, this measure should represent the outcome of the situation, whether or not all events in between are objective.
@@ -15,7 +15,7 @@ For this reason, I've chosen to focus on arrests as an objective outcome. Unlike
 
 This project follows [OSEMN process](https://towardsdatascience.com/5-steps-of-a-data-science-project-lifecycle-26c50372b492), which is an acronym for Obtain Scrub Examine Model Interpret. The steps are below.
 
-  _1. Data Collection_
+  __1. Data Collection__
   
    Data sources: [Chicago Investigative Stop Report data](https://home.chicagopolice.org/statistics-data/isr-data/) and Demographic information from the [US Census website](https://data.census.gov/cedsci/map?q=60624&tid=ACSDP5Y2018.DP05&vintage=2018&layer=VT_2018_860_00_PY_D1&cid=DP05_0001E&mode=thematic).
     
@@ -23,7 +23,13 @@ This project follows [OSEMN process](https://towardsdatascience.com/5-steps-of-a
     
    These columns are a mixture of binary Y/N (is a violent crime suspected?), categorical (CPD Beat) and even freeform text (zip code, vehicle model description). 
     
-  2. Cleaning and EDA
+  __2. Cleaning and EDA__
+  
+  This dataset included a large number of missing values. Columns not impacting analysis were dropped, including all columns referring to the CPD internal inventory number of confiscated items. Some columns were entirely empty or only had a handful of values; those were dropped as well. 
+  
+  For the scope of this analysis, columns that included only text descriptions were also removed. The "clean" .csv file saved to this repository represents these changes. 
+  
+  
   3. Machine Learning Model #1 - using only zip code, contact hour and reported race, can we predict whether or not a incident will result in arrest?
   3a. Are the two highest features statistically significant from the rest of the dataset?
   4. Machine Learning Model # 2 - can we predict whether or not an incident included one of the 100 officers with the highest arrest percentage?
