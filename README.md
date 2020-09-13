@@ -1,5 +1,5 @@
 # Capstone-Project: Examining Bias in Chicago Policing with Machine Learning
-============================================================================
+========================================================================================
 
 ## Project Scope
 The intention of this project is to explore policing data for bias, measured in arrest rates. Iterating through various machine learning models, I attempted to answer two questions:
@@ -75,6 +75,14 @@ This project follows [OSEMN process](https://towardsdatascience.com/5-steps-of-a
 __Knowing which officers from our dataset had the highest arrest rates, can we predict whether or not one of the "highest" officers was involved, using only demographic information about the person investigated?__
 
 ### Additional Cleaning Methods
+
+This model had a different focus than the first one, and used the data in a very different way. Instead of starting with arrest as our target and looking at only three variables, I've included *all* demographic information possible. This required a good deal more cleaning and manipulation.
+
+The first step was to isolate the arrest rate for all officers, so we could determine the officers with the highest rate. Here's what that looks like: ![image](https://github.com/lambertmk/Capstone-Project/blob/master/images/Screen%20Shot%202020-09-13%20at%201.55.37%20PM.png)
+
+Many assumptions were made here, so that the resulting dataset was able to be analyzed using common machine learning algorithms. Freeform text fields were largely ignored, as were fields dependent on the discovery of a particular item or substance (these were quite small in number). Columns such as race, build and hair color were left as categorical, and a label encoder applied.
+
+The cleaned dataframe result was roughly 48 columns; after dummy columns were created, it was 394. Here's a view of the correlation, before dummies: ![image](https://github.com/lambertmk/Capstone-Project/blob/master/images/Screen%20Shot%202020-09-13%20at%202.02.55%20PM.png)
 
 
 
