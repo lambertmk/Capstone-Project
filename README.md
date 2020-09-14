@@ -49,7 +49,7 @@ This project follows [OSEMN process](https://towardsdatascience.com/5-steps-of-a
   
   ### Model Details
   
-  Logistic Regression, Gradient Boosting, XGBoost and Decision Tree, AdaBoost and Support Vector Classification models were run, and all had F1 scores between .69 and .77. The highest performing models were Gradient Boosting and XGBoost.
+  Logistic Regression, Gradient Boosting, XGBoost and Decision Tree and AdaBoost models were run, and all had F1 scores between .69 and .77. The highest performing models were Gradient Boosting and XGBoost.
   
   The feature importance of the XGBoost model can be seen below: ![image](https://github.com/lambertmk/Capstone-Project/blob/master/images/Screen%20Shot%202020-09-13%20at%2012.08.51%20PM.png)
   
