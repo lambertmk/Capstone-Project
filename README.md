@@ -62,11 +62,13 @@ This project follows [OSEMN process](https://towardsdatascience.com/5-steps-of-a
   
   We can clearly see these zip's outsize impact on the dataset viewed below: ![image](https://github.com/lambertmk/Capstone-Project/blob/master/images/Screen%20Shot%202020-09-13%20at%2012.16.25%20PM.png)
   
+  Our visualization clearly display what we could have logically expected - of the four possible outcomes, the majority of stops result in arrest. Of stops that result in arrest, the race of the person is overwhelmingly Black. ![image](https://github.com/lambertmk/Capstone-Project/blob/master/images/Screen%20Shot%202020-09-15%20at%202.48.13%20PM.png)
+  
   ### Statistical Significance
   
-  It's helpful to know that these two zips have high rates of arrest; next, let's examine if those differences are statistically significant. Additionally, `MultiComparison` and tukey makes it easy to iterate through our possible combinations of zip and race and determine which have a p value of less than .05. A snippet is below: ![image](https://github.com/lambertmk/Capstone-Project/blob/master/images/Screen%20Shot%202020-09-13%20at%2012.23.26%20PM.png)
+  It's helpful to know that these two zips have high rates of arrest; next, let's examine if those differences are statistically significant. Additionally, `MultiComparison` and tukey makes it easy to iterate through our possible combinations and determine which have a p value of less than .05. A snippet is below: ![image](https://github.com/lambertmk/Capstone-Project/blob/master/images/Screen%20Shot%202020-09-13%20at%2012.23.26%20PM.png)
   
-  Using Ordinary Least Squares, we've determined that there is a statistically significant different in arrest rates by zip code, as well as by race. Using tukey, we're able to iterate through a list of each and return a true or false value for each pairing.
+  Using Ordinary Least Squares, we've determined that there is a statistically significant difference in arrest rates by zip code, as well as by race. Using tukey, we're able to iterate through a list of each and return a true or false value for each pairing.
   
   
 
@@ -82,15 +84,15 @@ The first step was to isolate the arrest rate for all officers, so we could dete
 
 Many assumptions were made here, so that the resulting dataset was able to be analyzed using common machine learning algorithms. Freeform text fields were largely ignored, as were fields dependent on the discovery of a particular item or substance (these were quite small in number). Columns such as race, build and hair color were left as categorical, and a label encoder applied.
 
-The cleaned dataframe result was roughly 48 columns; after dummy columns were created, it was 394. Here's a view of the correlation, before dummies: ![image](https://github.com/lambertmk/Capstone-Project/blob/master/images/Screen%20Shot%202020-09-13%20at%202.02.55%20PM.png)
+The cleaned dataframe result was roughly 48 columns; after dummy columns were created, it was 394. Here's a view of the correlation, before one hot encoding: ![image](https://github.com/lambertmk/Capstone-Project/blob/master/images/Screen%20Shot%202020-09-13%20at%202.02.55%20PM.png)
 
   ### Model Details
   
-  Logistic Regression, Gradient Boosting, XGBoost, Decision Tree, AdaBoost, Support Vector Classification and Random Forest Classifier were run; the best result was achieved using Decision Tree, with an F1 score of .33. A grid search was performed to boost DT's performance, to no luck. 
+  Logistic Regression, Gradient Boosting, XGBoost, Decision Tree, AdaBoost and Random Forest Classifier were run; the best result was achieved using Decision Tree, with an F1 score of roughly .33. A grid search was performed to boost DT's performance, to no luck. 
   
-  This dataset is extremely imbalanced; the highest 100 officers make up only 1.2% of the dataset! For this reason, Decision Tree was also run using `class_weight = 'balanced'`; the result was not any more accurate than the original run. 
+  This dataset is extremely imbalanced; the highest 100 officers make up only 1.2% of the dataset! For this reason, Decision Tree was also run using `class_weight = 'balanced'`; the result was not any better than the original run. 
   
-  A visual representation of the Decision Tree model is included in the image folder. 
+  A visual representation of this Decision Tree model is included in the image folder. 
   
   ### Interpretation
   
