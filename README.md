@@ -1,5 +1,5 @@
 # Capstone-Project: Examining Bias in Chicago Policing with Machine Learning
-====================================================================================
+==================================================================================
 
 ## Project Scope
 The intention of this project is to explore policing data for bias, measured in arrest rates. Iterating through various machine learning models, I attempted to answer two questions:
