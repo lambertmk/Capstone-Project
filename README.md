@@ -103,3 +103,13 @@ Much of this analysis is centered around the concept of a "highest" officer; tha
 The outcome of the Decision Tree model is an F1 score of .34 - not a strong model. Given that we're trying to predict whether or not one of 100 officers was involved and the dataset includes 7936 officers total (1.2%), we could also say that this model performs roughly 27x better than random guessing. 
 
 The intention of this second model was to test for strong bias in policing; to look for patterns in demographic data that would predict whether or not a subset of officers was involved. Knowing that our best result is a 34% F1 score is actually resassuring - we cannot in good conscience pinpoint if bias is occuring with these officers.
+
+
+## __Next Steps & Additional Work__ 
+
+Given the size of this dataset, there are a great deal of questions that could be asked and answered. What's covered above is a small slice. Some potential further work:
+1. Use time series analysis and ARIMA (or similar) to predict the number of arrests by zip code, officer, etc.
+2. Use time series analysis to discover seasonal, monthly variability in stop rates
+3. Analyze freeform columns (eg notes on found items) to predict arrest
+4. Utilize resampling to optimize model performance above
+5. Attempt to reduce computing power needed with PCA for first model
