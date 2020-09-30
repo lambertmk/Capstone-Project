@@ -51,7 +51,7 @@ This project follows [OSEMN process](https://towardsdatascience.com/5-steps-of-a
   
   Logistic Regression, Gradient Boosting, XGBoost and Decision Tree and AdaBoost models were run, and all had F1 scores between .69 and .77. The highest performing models were Gradient Boosting and XGBoost.
   
-  The feature importance of the XGBoost model can be seen below: ![image](https://github.com/lambertmk/Capstone-Project/blob/master/images/Screen%20Shot%202020-09-13%20at%2012.08.51%20PM.png)
+  The feature importance of the XGBoost model can be seen below: ![image](https://github.com/lambertmk/Using-Machine-Learning-to-Examine-Bias-in-Chicago-Policing-Data/blob/master/images/Feature%20Importance.png)
   
   Using our zipcode label encoder's `inverse_transformation`, we now know that the highest contributing factors are a stop occuring in 60624 or 60623.
   
@@ -60,13 +60,13 @@ This project follows [OSEMN process](https://towardsdatascience.com/5-steps-of-a
   
   Using the Census website gives us additional context into why 60624 and 60623 may indicate higher rates of arrest - these are overwhelmingly communities of color with large numbers of residents living below the poverty line. Doing a quick calculation on these zipcodes show that the arrest rate is almost 2x the arrest rate for the entire dataset.
   
-  We can clearly see these zip's outsize impact on the dataset viewed below: ![image](https://github.com/lambertmk/Capstone-Project/blob/master/images/Screen%20Shot%202020-09-13%20at%2012.16.25%20PM.png)
+  We can clearly see these zip's outsize impact on the dataset viewed below: ![image](https://github.com/lambertmk/Using-Machine-Learning-to-Examine-Bias-in-Chicago-Policing-Data/blob/master/images/Highest%20Zips%20-%20Enforcement%20Type.png)
   
-  Our visualization clearly display what we could have logically expected - of the four possible outcomes, the majority of stops result in arrest. Of stops that result in arrest, the race of the person is overwhelmingly Black. ![image](https://github.com/lambertmk/Capstone-Project/blob/master/images/Screen%20Shot%202020-09-15%20at%202.48.13%20PM.png)
+  Our visualization clearly display what we could have logically expected - of the four possible outcomes, the majority of stops result in arrest. Of stops that result in arrest, the race of the person is overwhelmingly Black. ![image](https://github.com/lambertmk/Using-Machine-Learning-to-Examine-Bias-in-Chicago-Policing-Data/blob/master/images/Enforcement%20Type%20%26%20Race%20Code.png)
   
   ### Statistical Significance
   
-  It's helpful to know that these two zips have high rates of arrest; next, let's examine if those differences are statistically significant. Additionally, `MultiComparison` and tukey makes it easy to iterate through our possible combinations and determine which have a p value of less than .05. A snippet is below: ![image](https://github.com/lambertmk/Capstone-Project/blob/master/images/Screen%20Shot%202020-09-13%20at%2012.23.26%20PM.png)
+  It's helpful to know that these two zips have high rates of arrest; next, let's examine if those differences are statistically significant. Additionally, `MultiComparison` and tukey makes it easy to iterate through our possible combinations and determine which have a p value of less than .05. A snippet is below: ![image](https://github.com/lambertmk/Using-Machine-Learning-to-Examine-Bias-in-Chicago-Policing-Data/blob/master/images/Tukey.png)
   
   Using Ordinary Least Squares, we've determined that there is a statistically significant difference in arrest rates by zip code, as well as by race. Using tukey, we're able to iterate through a list of each and return a true or false value for each pairing.
   
@@ -84,7 +84,7 @@ The first step was to isolate the arrest rate for all officers, so we could dete
 
 Many assumptions were made here, so that the resulting dataset was able to be analyzed using common machine learning algorithms. Freeform text fields were largely ignored, as were fields dependent on the discovery of a particular item or substance (these were quite small in number). Columns such as race, build and hair color were left as categorical, and a label encoder applied.
 
-The cleaned dataframe result was roughly 48 columns; after dummy columns were created, it was 394. Here's a view of the correlation, before one hot encoding: ![image](https://github.com/lambertmk/Capstone-Project/blob/master/images/Screen%20Shot%202020-09-13%20at%202.02.55%20PM.png)
+The cleaned dataframe result was roughly 48 columns; after dummy columns were created, it was 394. Here's a view of the correlation, before one hot encoding: ![image](https://github.com/lambertmk/Using-Machine-Learning-to-Examine-Bias-in-Chicago-Policing-Data/blob/master/images/Correlation%20Heat%20Map.png)
 
   ### Model Details
   
@@ -98,7 +98,7 @@ The cleaned dataframe result was roughly 48 columns; after dummy columns were cr
   
 Examining arrest rates compared to the entire dataset of reported race leads to a stark discovery - people reported as black are arrested at 8% (raw) higher than their representation in the dataset. For white people, it's 6% lower! Every single other race besides black has a lower percentage of arrests than total representation in the data.
 
-Much of this analysis is centered around the concept of a "highest" officer; that is, one of the 100 officers with the highest arrest rate. The following shows those officers' relationship to race. The data is limited to arrests only. ![image](https://github.com/lambertmk/Capstone-Project/blob/master/images/Screen%20Shot%202020-09-15%20at%202.57.36%20PM.png)
+Much of this analysis is centered around the concept of a "highest" officer; that is, one of the 100 officers with the highest arrest rate. The following shows those officers' relationship to race. The data is limited to arrests only. ![image](https://github.com/lambertmk/Using-Machine-Learning-to-Examine-Bias-in-Chicago-Policing-Data/blob/master/images/Highest%20100%20Officers%20-%20Race%20Code.png)
 
 The outcome of the Decision Tree model is an F1 score of .34 - not a strong model. Given that we're trying to predict whether or not one of 100 officers was involved and the dataset includes 7936 officers total (1.2%), we could also say that this model performs roughly 27x better than random guessing. 
 
