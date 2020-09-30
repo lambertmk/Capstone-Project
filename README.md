@@ -109,7 +109,10 @@ The intention of this second model was to test for strong bias in policing; to l
 As mentioned above, the city of Chicago provided the data for this analysis: [Chicago Investigative Stop Report data](https://home.chicagopolice.org/statistics-data/isr-data/) and Demographic information from the [US Census website](https://data.census.gov/cedsci/map?q=60624&tid=ACSDP5Y2018.DP05&vintage=2018&layer=VT_2018_860_00_PY_D1&cid=DP05_0001E&mode=thematic).
 
 To reproduce any of this analysis, I've saved this data in the folder titled Data Files. The cleaned data (with freeform text removed) can be found as ["ISR-data_clean.csv.zip"](https://github.com/lambertmk/Using-Machine-Learning-to-Examine-Bias-in-Chicago-Policing-Data/blob/master/Data%20Files/ISR_data_clean.csv.zip)
+
 The data used for the first set of Machine Learning models is saved as ["ISR_data_model1.csv"](https://github.com/lambertmk/Using-Machine-Learning-to-Examine-Bias-in-Chicago-Policing-Data/blob/master/Data%20Files/ISR_data_model1.csv). If starting here, proceed with train_test_split.
+
+The data used for the second set of models can be found in the same Data Files folder, with the title ["ISR_data_model_2.csv.zip"](https://github.com/lambertmk/Using-Machine-Learning-to-Examine-Bias-in-Chicago-Policing-Data/blob/master/Data%20Files/ISR_data_model2.csv.zip). Note that this is a good deal larger!
 
 Similar datasets can be found via the Police Data Accountability Project. [PDAP Github here.](https://github.com/Police-Data-Accessibility-Project/Police-Data-Accessibility-Project)
 
