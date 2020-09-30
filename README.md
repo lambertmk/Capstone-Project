@@ -104,7 +104,14 @@ The outcome of the Decision Tree model is an F1 score of .34 - not a strong mode
 
 The intention of this second model was to test for strong bias in policing; to look for patterns in demographic data that would predict whether or not a subset of officers was involved. Knowing that our best result is a 34% F1 score is actually resassuring - we cannot in good conscience pinpoint if bias is occuring with these officers.
 
- ### Reproducing
+ ### Guide to Enforcement Types
+ In the Chicago PD, there are four types of enforcement outcomes: ANOV, ARR, OTH and PSC. Of course, this could also be missing. 
+ 
+ ANOV: 
+ 
+ Definitions taken from the City of Chicago's [Glossary of Terms](https://www.chicago.gov/city/en/depts/ah/supp_info/glossary_of_terms.html)
+
+ ### Reproduction
  
 As mentioned above, the city of Chicago provided the data for this analysis: [Chicago Investigative Stop Report data](https://home.chicagopolice.org/statistics-data/isr-data/) and Demographic information from the [US Census website](https://data.census.gov/cedsci/map?q=60624&tid=ACSDP5Y2018.DP05&vintage=2018&layer=VT_2018_860_00_PY_D1&cid=DP05_0001E&mode=thematic).
 
