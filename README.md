@@ -96,7 +96,7 @@ The cleaned dataframe result was roughly 48 columns; after dummy columns were cr
   
   ### Interpretation
   
-Examinging arrest rates compared to the entire dataset of reported race leads to a stark discovery - people reported as black are arrested at 8% (raw) higher than their representation in the dataset. For white people, it's 6% lower! Every single other race besides black has a lower percentage of arrests than total representation in the data.
+Examining arrest rates compared to the entire dataset of reported race leads to a stark discovery - people reported as black are arrested at 8% (raw) higher than their representation in the dataset. For white people, it's 6% lower! Every single other race besides black has a lower percentage of arrests than total representation in the data.
 
 Much of this analysis is centered around the concept of a "highest" officer; that is, one of the 100 officers with the highest arrest rate. The following shows those officers' relationship to race. The data is limited to arrests only. ![image](https://github.com/lambertmk/Capstone-Project/blob/master/images/Screen%20Shot%202020-09-15%20at%202.57.36%20PM.png)
 
@@ -104,6 +104,11 @@ The outcome of the Decision Tree model is an F1 score of .34 - not a strong mode
 
 The intention of this second model was to test for strong bias in policing; to look for patterns in demographic data that would predict whether or not a subset of officers was involved. Knowing that our best result is a 34% F1 score is actually resassuring - we cannot in good conscience pinpoint if bias is occuring with these officers.
 
+ ### Reproducing
+ 
+As mentioned above, the city of Chicago provided the data for this analysis: [Chicago Investigative Stop Report data](https://home.chicagopolice.org/statistics-data/isr-data/) and Demographic information from the [US Census website](https://data.census.gov/cedsci/map?q=60624&tid=ACSDP5Y2018.DP05&vintage=2018&layer=VT_2018_860_00_PY_D1&cid=DP05_0001E&mode=thematic).
+
+The 
 
 ## __Next Steps & Additional Work__ 
 
